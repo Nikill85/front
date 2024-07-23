@@ -1,0 +1,162 @@
+.container-fluid {
+  padding: 20px;
+  background: linear-gradient(to right, #0d031a, #383538);
+  backdrop-filter: blur(10px) brightness(90%) contrast(120%);
+  color: white;
+}
+  
+  h4 {
+    color: #fff; /* Letras blancas */
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  
+
+  .btn_new {
+    cursor: pointer;
+    color: white; /* Color de texto blanco */
+    text-transform: uppercase;
+    font-weight: bold; /* Letra en negrita */
+    background: linear-gradient(to right, #790733a2, #957ed4,  #790733a2); /* Degradado de colores */
+    border: none; /* Quitamos el borde para un aspecto más limpio */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 12px 24px; /* Ajustamos el espaciado interno para hacer el botón más pequeño */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    margin-top: 10px; /* Añadimos margen superior para separarlo del título */
+  }
+  
+  .btn_new:hover {
+    background: linear-gradient(to right, #957ed4, #790733a2,  #957ed4); /* Cambio de degradado al pasar el ratón */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
+  }
+  
+         
+          
+                /* Estilos para la tabla */
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #f9f9f9; /* Fondo gris muy claro */
+  color: #333; /* Color de texto oscuro */
+  border: 1px solid #ddd; /* Borde gris claro */
+}
+
+/* Estilo para los encabezados de la tabla */
+#customers th {
+  padding: 12px; /* Espaciado interno */
+  text-align: left; /* Alineación del texto a la izquierda */
+  background: linear-gradient(to right, #790733a2, #957ed4,  #790733a2);
+  color: white; /* Color de texto blanco */
+  font-weight: bold; /* Negrita en encabezados */
+  border: 1px solid #ddd; /* Borde gris claro */
+}
+
+/* Estilo para las celdas de la tabla */
+#customers td {
+  padding: 12px; /* Espaciado interno */
+  border: 1px solid #ddd; /* Borde gris claro */
+}
+
+/* Estilo para filas pares de la tabla */
+#customers tr:nth-child(even) {
+  background-color: #ffffff; /* Fondo blanco para filas pares */
+}
+
+/* Cambiar color de fondo al pasar el mouse */
+#customers tr:hover {
+  background-color: #ca09531f; /* Cambio de color al pasar el mouse */
+}
+
+
+          .bajo-stock {
+            background-color: #FFE262; /* Cambia el color de fondo a amarillo */
+            color: black; /* Cambia el color del texto a negro para mantener la legibilidad */
+          }
+          
+          .sin-stock {
+            background-color: #FF6364; /* Cambia el color de fondo a rojo */
+            color: white; /* Cambia el color del texto a blanco para mantener la legibilidad */
+          }
+          
+          .suficiente-stock {
+            background-color: #91C483; /* Cambia el color de fondo a verde */
+            color: white; /* Cambia el color del texto a blanco para mantener la legibilidad */
+          }
+  .icono_edit,
+  .icono_trash {
+    color: linear-gradient(135deg, #ab6ec9, #48a9a6); /* Degradado desde violeta hasta celeste */
+    transition: color 0.3s ease; /* Agregando transición al color de los iconos */
+  }
+  
+  .icono_edit:hover,
+  .icono_trash:hover {
+    color: #ffd700; /* Dorado al pasar el ratón */
+  }
+
+  ///////
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  }
+  
+  .modal-content {
+    background-color: #f3f2f2;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .estadisticas {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .estadistica {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .estadistica h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .estadistica p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .modal.active {
+    display: block; /* Mostrar el modal cuando tenga la clase 'active' */
+  }
+  .component-container {
+    width: 100%;
+    min-height: 400px; /* Ejemplo de tamaño fijo */
+}

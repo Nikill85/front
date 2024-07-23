@@ -1,0 +1,97 @@
+<app-home></app-home>
+<div class="container-fluid" style="color: white;">
+    
+    <div class="row">
+      <div class="col-12" style="display: flex; align-items: center;">
+        <img src="assets/compras.png" style="width: 60px; max-height: 60px; margin-right: 10px;">
+        <h4 style="margin: 0;">Nueva Compra</h4>
+    </div>
+    </div>
+    
+    <div class="row" >
+      <div class="col-2">
+        <div class="input_container">
+          <label class="label_input">Fecha de Compra</label>
+          <input type="date" class="input_new" [(ngModel)]="compraReq.fecha_compra">
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="input_container">
+          <label class="label_input">Producto</label>
+          <select class="input_new" [(ngModel)]="compraReq.fk_producto" (input)="cal($event)">
+            <option *ngFor="let p of productos" [ngValue]="p.id_producto">{{ p.descripcion }}</option>
+            
+          </select>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="input_container">
+          <label class="label_input">Cantidad</label>
+          <input type="number" class="input_new" [(ngModel)]="compraReq.cantidad" (input)="calcularTotal($event)">
+        </div>
+      </div>
+    
+      
+      <div class="col-2">
+        <div class="input_container">
+          <label class="label_input">Total Compra</label>
+          <input type="text" class="input_new" [(ngModel)]="totalCompra"  disabled >
+        </div>
+      </div>
+      <!-- <div class="col-1">
+        <button pButton (click)="crearCompra()" label="Crear" class="p-button-success btn_new"></button>
+      </div> -->
+      <div class="col-1">
+        <div *ngIf="!estoyEditando">
+            <button pButton (click)="crearCompra()" label="Crear" class="btn_new"></button>
+        </div>
+        <div class="btn_container" *ngIf="estoyEditando">
+            <button pButton (click)="salvarEdicion()" label="Guardar"
+                class="p-button-success btn_new"></button>
+            <button pButton (click)="cancelarEdicion()" label="Cancelar" class="p-button-danger"></button>
+        </div>
+    </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h4>Compras</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div style="overflow-x:auto;">
+          <table id="customers">
+            <thead>
+              <tr>
+                <th>Fact.</th>
+                <th>Fecha</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+             
+                <th>Total Compra</th>
+                <th style="width: 3rem;">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let c of compras">
+                <td>{{ c.id_compras }}</td>
+                <td>{{ c.fecha_compra | date: 'dd/MM/yy' }}</td>
+                <td>{{getProductoDescripcion(c.fk_producto)}}</td>
+                <td>{{ c.cantidad }}</td>
+               
+                <td>{{ c.total_costoCompra | currency }}</td>
+                <td style="text-align: center;">
+                  <i class="pi pi-pencil icono_edit" (click)="editarCompra(c)"></i>
+                  <i class="pi pi-trash icono_trash " (click)="eliminarCompra(c)"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

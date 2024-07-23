@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import 'bootstrap/scss/bootstrap';
+
+
+.contenedor {
+  padding: 5px;
+  border: solid 1px;
+  margin-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 5px;
+  background-color: #fafafa;
+
+  input {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+    height: 30px;
+  }
+}
+
+.row {
+  margin-top: 10px;
+  align-items: center;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.icono_edit {
+  color: #04AA6D;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.icono_trash {
+  color: red;
+  cursor: pointer;
+}
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.label_input {
+  padding-left: 5px;
+}

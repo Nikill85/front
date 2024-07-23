@@ -1,0 +1,46 @@
+<div class="container_fluid" style="color: white;">
+  <div class="row">
+    <div class="col-12">
+      <div class="menu">
+        <div class="logo" style="position: absolute; top: 10px; left: 5px;">
+          <img src="assets/tiendi.png" alt="" style="width: 64px; max-height: 64px;">
+      </div>
+        <div class="items">
+           <div class="item">
+            <span class="btn" (click)="goTo('tipo-producto')">Tipo de Producto</span>
+          </div>
+
+          <div class="item">
+            <span class="btn" (click)="goTo('productos')">Productos</span>
+          </div>
+
+          <div class="item">
+            <span class="btn" (click)="goTo('compras')">Compras</span>
+          </div>
+
+          <div class="item">
+            <span class="btn" (click)="goTo('ventas')">Ventas</span>
+          </div>
+
+          <div class="item">
+            <span class="btn" (click)="goTo('stock')">Stock</span>
+          </div>
+
+          <div class="item">
+            <span class="btn" (click)="goTo('proveedores')">Proveedores</span>
+          </div>
+        </div>
+        <div class="logout-container">
+          <button class="logout-button"  style="color: rgb(247, 81, 211)"(click)="goTo('loguin')">Salir<img src="assets/logout.png" alt="" style="width: 30px; max-height: 30px;"> </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div *ngIf="isAdminLoggedIn()" class="welcome-message">
+      <i class="pi pi-user" style="font-size: 1.1rem" style="color: rgb(211, 11, 168)"></i> Bienvenido Admin 
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

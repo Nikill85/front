@@ -1,0 +1,50 @@
+<app-home></app-home>
+<div class="container-fluid" style="color: white; ">
+    <div class="row">
+        <div class="col-12" style="display: flex; align-items: center;">
+            <img src="assets/tipoProducto.png" style="width: 60px; max-height: 60px; margin-right: 10px;">
+            <h4 style="margin: 0;">Nuevo Tipo de Producto</h4>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <label for="" class="label_input">Tipo de producto </label> <br>
+                <input type="text" class="input_new" [(ngModel)]="editarOnuevoTipoProducto.descripcion" >    <button *ngIf="!estoyEditando" pButton type="button" (click)="agregarTipo()" label="Nuevo"  class="btn_new"></button>
+            </div>
+            <div class="col-3" style="display: flex; flex-direction: row; justify-content: space-between;">
+                
+                <button *ngIf="estoyEditando" pButton type="button" (click)="salvarEdicion()" label="Guardar"  class="p-button-success btn_new"></button>
+                <button *ngIf="estoyEditando" pButton type="button" (click)="cancelarEdicion()" label="Cancelar" class="p-button-danger"></button>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px; flex-grow: 1;">
+        <div class="col-12">
+            <h4>Tipos de Producto</h4>
+        </div>
+    </div>
+    <div class="row" style="flex-grow: 1;">
+        <div class="col-12">
+            <div style="overflow-x:auto; height: calc(100% - 100px);"> <!-- Ajusta la altura aquí -->
+                <table id="customers">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Descripción</th>
+                            <th style="width: 3rem;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let tipoProd of tipoProductos">
+                            <td>{{tipoProd.id_tipo_producto}}</td>
+                            <td>{{tipoProd.descripcion}}</td>
+                            <td style="text-align: center;">
+                                <i class="pi pi-pencil icono_edit" (click)="editarTipo(tipoProd)"></i>
+                                <i class="pi pi-trash icono_trash" (click)="eliminarTipo(tipoProd)"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

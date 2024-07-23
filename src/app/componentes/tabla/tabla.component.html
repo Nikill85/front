@@ -1,0 +1,28 @@
+<div *ngIf="info">
+    <p-table [columns]="columnas" [value]="info" [paginator]="false" [rows]="5" [tableStyle]="{ 'min-width': '50rem' }"
+        styleClass="p-datatable-striped p-datatable-sm">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{ col.header }}
+                </th>
+                <th style="width: 3em;" *ngIf="mostrarAcciones">
+                    Acciones
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns">
+                    {{ (col.header == 'Precio' ? (rowData[col.field] | currency) : rowData[col.field]) }}
+                </td>
+                <td *ngIf="mostrarAcciones">
+                    <div class="action_container">
+                        <i class="pi pi-pencil icon_edit" (click)="emitirAcccion('editar', rowData)"></i>
+                        <i class="pi pi-trash icon_trash" (click)="emitirAcccion('eliminar', rowData)"></i>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

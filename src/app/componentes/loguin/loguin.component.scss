@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Lato');
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+:root{
+    --primaryred:#ff424f;
+    --secondaryred:#f84735;
+    --lightblack:#222b31;
+    --darkblack:#191c1f;
+    --mainfont:'Dancing Script', cursive;
+    --secondfont: 'Lato', sans-serif;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 1.5;
+	font-family:var(--secondfont);
+}
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+.fullcontent{
+    width:100%;
+    min-height: 100vh;
+    height: auto;
+    padding:6% 10% 5% 10%;
+    // background-image: url(img/b.jpg);
+    //https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c3c11a4e-961b-47ec-8f72-acebce4c4562/dfzlpsl-b9bf9a04-bdde-458a-a3c7-8a72259cc84e.jpg/v1/fill/w_1280,h_1280,q_75,strp/amusement_park__colourful_illustration_by_coolarts223_dfzlpsl-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzYzExYTRlLTk2MWItNDdlYy04ZjcyLWFjZWJjZTRjNDU2MlwvZGZ6bHBzbC1iOWJmOWEwNC1iZGRlLTQ1OGEtYTNjNy04YTcyMjU5Y2M4NGUuanBnIiwiaGVpZ2h0IjoiPD0xMjgwIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvYzNjMTFhNGUtOTYxYi00N2VjLThmNzItYWNlYmNlNGM0NTYyXC9jb29sYXJ0czIyMy00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.eukxBAjqb8zWtyY1tVVCmmqlzS04kHMHtMutKFNtyZY
+    background:linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),url(https://5.imimg.com/data5/SELLER/Default/2023/11/361132821/WF/HT/PP/69247935/toy-shop-interior-design-services.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: row;
+}
+.headings{
+     /* background:red;  */
+    flex-basis: 65%;
+    margin-right: 5%;
+}
+.headings h1{
+    font-size: 6rem;
+    font-family: 'Pacifico', cursive;
+    color: #ffffff;
+    margin: 3% 0;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5), /* Sombra principal */
+        0 0 10px rgba(255, 165, 0, 0.8), /* Contorno luminoso en tonalidad llamativa */
+        0 0 20px rgba(255, 165, 0, 0.6), /* Contorno luminoso en tonalidad llamativa */
+        0 0 30px rgba(255, 165, 0, 0.4); /* Contorno luminoso en tonalidad llamativa */
+}
+.headings h2{
+    font-size: 2rem;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 1.5rem;
+    text-align: center;
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.5), /* Sombra principal */
+        0 0 5px rgba(255, 165, 0, 0.5), /* Contorno luminoso en tonalidad llamativa */
+        0 0 10px rgba(255, 165, 0, 0.3); /* Contorno luminoso en tonalidad llamativa */
+
+}
+
+.formbox {
+    background: rgba(255, 255, 255, 0.4);
+    color: var(--primaryred);
+    flex-basis: 35%; /* Aumenté el ancho del formbox al 35% */
+    border-top: 8px solid var(--secondaryred);
+    padding: 3% 5%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formbox form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formbox h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondaryred); /* Cambié el color del título para que coincida con el tema */
+    text-shadow: 1px 1px 2px rgba(224, 23, 90, 0.555);
+}
+
+.formbox form label {
+    color: var(--primaryred);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.formbox form .asd {
+    border: 2px solid var(--primaryred);
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 2.5rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    width: calc(100% - 0px); /* Ajusta el ancho del input según sea necesario */
+    /* 5% de padding del contenedor (.formbox) + 10px de padding izquierdo del input + 10px de padding derecho del input + 2px de borde */
+}
+
+
+.formbox form .asd:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Aumenté la intensidad de la luz al enfocar los campos de entrada */
+}
+
+.cssbuttons-io-button {
+    background: var(--secondaryred);
+    color: white;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 15px;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: calc(80% - 10px); /* Ajusté el ancho del botón para que sea igual al input */
+    max-width: 100%;
+    margin-top: 10px; /* Separación superior del botón */
+}
+
+.cssbuttons-io-button:hover {
+    background-color: rgba(224, 23, 90, 0.555);
+}
+
+.cssbuttons-io-button:active {
+    transform: scale(0.95);
+}
+.input-icon {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 1rem; /* Agregué un margen inferior para separar los inputs */
+}
+
+.input-icon input {
+    padding-left: 40px; /* Ajusté el padding izquierdo para dejar espacio para el icono */
+    width: calc(100% - 2rem); /* Ajusté el ancho del input para dejar espacio para el icono */
+    margin-bottom: 1rem; /* Agregué un margen inferior para separar los inputs */
+}
+
+.input-icon i {
+    position: absolute;
+    left: 10px; /* Ajusté la posición izquierda del icono dentro del input */
+    top: 40%; /* Moví el icono un poco más arriba */
+    transform: translateY(-50%);
+    color: #666; /* Color del icono */
+    font-size: 20px; /* Tamaño del icono ajustado a 20px */}
